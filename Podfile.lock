@@ -1,0 +1,28 @@
+PODS:
+  - IBAnimatable (5.2.1)
+  - JVFloatLabeledTextField (1.2.1)
+  - KeyboardMan (1.2.3)
+  - TextFieldEffects (1.5.1)
+
+DEPENDENCIES:
+  - IBAnimatable
+  - JVFloatLabeledTextField
+  - KeyboardMan
+  - TextFieldEffects
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - IBAnimatable
+    - JVFloatLabeledTextField
+    - KeyboardMan
+    - TextFieldEffects
+
+SPEC CHECKSUMS:
+  IBAnimatable: a46b835ec6875178516cf7e014a40194d6bfa3fc
+  JVFloatLabeledTextField: cfc44e3c4d493b2ed92ede8035e8e89c2912ba64
+  KeyboardMan: b51e3209d41ff56f65459c9cf734a5f8c5443783
+  TextFieldEffects: 7d372f58aeaf9acd9626bbf962680aef926b085d
+
+PODFILE CHECKSUM: 8add79694f29b568eef2b031e63f0865c419ad2d
+
+COCOAPODS: 1.5.2
