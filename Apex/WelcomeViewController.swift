@@ -15,7 +15,7 @@ import IBAnimatable
 class welcomeViewController: UIViewController {
  
     // IB Outlets
-    @IBOutlet weak var logoImage: UIImageView!
+    @IBOutlet weak var logImage: UIImageView!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var countryPicker: UIView!
     @IBOutlet weak var countryCodeLabel: UILabel!
