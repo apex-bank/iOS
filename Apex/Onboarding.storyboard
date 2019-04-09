@@ -45,6 +45,9 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOy-pW-qhL">
                                         <rect key="frame" x="8" y="28" width="60" height="30"/>
+                                        <connections>
+                                            <segue destination="M8m-XD-oZn" kind="show" id="JmC-ES-ESZ"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsc-sR-Rqc">
                                         <rect key="frame" x="3" y="0.0" width="46" height="15"/>
@@ -91,6 +94,9 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="hQf-iB-3hi" id="Mgd-Xy-aW3"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xg-G1-n9m" customClass="AnimatableButton" customModule="IBAnimatable">
                                 <rect key="frame" x="37.666666666666657" y="712" width="300" height="50"/>
@@ -200,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FWR-4J-cLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="583" y="-157"/>
+            <point key="canvasLocation" x="644" y="-157"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8Ma-5t-2VS">
