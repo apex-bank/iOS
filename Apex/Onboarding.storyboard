@@ -297,23 +297,23 @@
                             <view contentMode="scaleToFill" horizontalHuggingPriority="50" verticalHuggingPriority="50" translatesAutoresizingMaskIntoConstraints="NO" id="DhD-hR-RCt">
                                 <rect key="frame" x="124" y="208" width="127" height="20"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZPu-Ej-VPX">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="ZPu-Ej-VPX">
                                         <rect key="frame" x="0.0" y="0.0" width="127" height="20"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n6E-pm-PDi">
-                                                <rect key="frame" x="0.0" y="0.0" width="25.666666666666668" height="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="18.333333333333332" height="20"/>
                                                 <color key="backgroundColor" red="0.5547172427" green="0.82603865860000003" blue="0.94744139910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbA-jK-KSO">
-                                                <rect key="frame" x="33.666666666666657" y="0.0" width="26" height="20"/>
+                                                <rect key="frame" x="36.333333333333343" y="0.0" width="18.333333333333329" height="20"/>
                                                 <color key="backgroundColor" red="0.5547172427" green="0.82603865860000003" blue="0.94744139910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NAV-LH-pp2">
-                                                <rect key="frame" x="67.666666666666657" y="0.0" width="25.666666666666671" height="20"/>
+                                                <rect key="frame" x="72.666666666666657" y="0.0" width="18" height="20"/>
                                                 <color key="backgroundColor" red="0.5547172427" green="0.82603865860000003" blue="0.94744139910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLn-Ho-n45">
-                                                <rect key="frame" x="101.33333333333334" y="0.0" width="25.666666666666671" height="20"/>
+                                                <rect key="frame" x="108.66666666666666" y="0.0" width="18.333333333333329" height="20"/>
                                                 <color key="backgroundColor" red="0.5547172427" green="0.82603865860000003" blue="0.94744139910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                         </subviews>
@@ -355,6 +355,10 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="zwF-H6-3Bi" id="LHA-m2-Epd"/>
+                        <outlet property="passcode1" destination="n6E-pm-PDi" id="B3Y-iJ-Ak0"/>
+                        <outlet property="passcode2" destination="lbA-jK-KSO" id="rvC-LH-ofa"/>
+                        <outlet property="passcode3" destination="NAV-LH-pp2" id="klQ-2m-icv"/>
+                        <outlet property="passcode4" destination="dLn-Ho-n45" id="9jT-lU-3mI"/>
                         <outlet property="passcodeCollectionView" destination="4Zr-Us-eQM" id="YCO-ce-vKE"/>
                         <outlet property="passcodeLabel" destination="2PV-qK-4Rf" id="odl-Hc-6Vy"/>
                     </connections>
