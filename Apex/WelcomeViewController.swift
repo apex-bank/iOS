@@ -26,6 +26,7 @@ class welcomeViewController: UIViewController {
     @IBOutlet weak var widthConstraint: NSLayoutConstraint!
     @IBOutlet weak var phoneNumberLabelError: UILabel!
     @IBOutlet weak var countryCodeButton: UIButton!
+    @IBOutlet weak var tempButton: UIButton!
     
     
     

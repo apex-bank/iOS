@@ -17,6 +17,12 @@
 		9B487B5B225C0DA7001DDC08 /* ApexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B487B5A225C0DA7001DDC08 /* ApexUITests.swift */; };
 		9B487B69225C0DF6001DDC08 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B487B68225C0DF6001DDC08 /* Onboarding.storyboard */; };
 		9B487B6B225C111F001DDC08 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B487B6A225C111F001DDC08 /* WelcomeViewController.swift */; };
+		9B487B6D225D4669001DDC08 /* CountryCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B487B6C225D4669001DDC08 /* CountryCodeViewController.swift */; };
+		9B487B70225D50BA001DDC08 /* PasscodeNumberPadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B487B6E225D50BA001DDC08 /* PasscodeNumberPadCollectionViewCell.swift */; };
+		9B487B71225D50BA001DDC08 /* PasscodeNumberPadCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B487B6F225D50BA001DDC08 /* PasscodeNumberPadCollectionViewCell.xib */; };
+		9B487B74225D5383001DDC08 /* PasscodeNumberPadTextCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B487B72225D5383001DDC08 /* PasscodeNumberPadTextCollectionViewCell.swift */; };
+		9B487B75225D5383001DDC08 /* PasscodeNumberPadTextCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B487B73225D5383001DDC08 /* PasscodeNumberPadTextCollectionViewCell.xib */; };
+		9B487B7A225D5460001DDC08 /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B487B79225D5460001DDC08 /* PasscodeViewController.swift */; };
 		ABB9218A5AB555297AB3C031 /* Pods_ApexTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6ACA3E1AEC26449EC7D8981 /* Pods_ApexTests.framework */; };
 		F66BB6657AF225BB00311B46 /* Pods_Apex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7EE280B9AE0F25C246E3F9 /* Pods_Apex.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +64,12 @@
 		9B487B5C225C0DA7001DDC08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B487B68225C0DF6001DDC08 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		9B487B6A225C111F001DDC08 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		9B487B6C225D4669001DDC08 /* CountryCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeViewController.swift; sourceTree = "<group>"; };
+		9B487B6E225D50BA001DDC08 /* PasscodeNumberPadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeNumberPadCollectionViewCell.swift; sourceTree = "<group>"; };
+		9B487B6F225D50BA001DDC08 /* PasscodeNumberPadCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasscodeNumberPadCollectionViewCell.xib; sourceTree = "<group>"; };
+		9B487B72225D5383001DDC08 /* PasscodeNumberPadTextCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeNumberPadTextCollectionViewCell.swift; sourceTree = "<group>"; };
+		9B487B73225D5383001DDC08 /* PasscodeNumberPadTextCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasscodeNumberPadTextCollectionViewCell.xib; sourceTree = "<group>"; };
+		9B487B79225D5460001DDC08 /* PasscodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
 		B18359E7D0ABD0C9FCAED6D4 /* Pods-ApexUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApexUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ApexUITests/Pods-ApexUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CC0BD7D8D4339FC9F1840A34 /* Pods-Apex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Apex.release.xcconfig"; path = "Pods/Target Support Files/Pods-Apex/Pods-Apex.release.xcconfig"; sourceTree = "<group>"; };
 		D6ACA3E1AEC26449EC7D8981 /* Pods_ApexTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApexTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +147,8 @@
 				9B487B3C225C0DA5001DDC08 /* ViewController.swift */,
 				9B487B3E225C0DA5001DDC08 /* Main.storyboard */,
 				9B487B68225C0DF6001DDC08 /* Onboarding.storyboard */,
+				9B487B76225D5418001DDC08 /* Passcode */,
+				9B487B6C225D4669001DDC08 /* CountryCodeViewController.swift */,
 				9B487B6A225C111F001DDC08 /* WelcomeViewController.swift */,
 				9B487B41225C0DA7001DDC08 /* Assets.xcassets */,
 				9B487B43225C0DA7001DDC08 /* LaunchScreen.storyboard */,
@@ -159,6 +173,18 @@
 				9B487B5C225C0DA7001DDC08 /* Info.plist */,
 			);
 			path = ApexUITests;
+			sourceTree = "<group>";
+		};
+		9B487B76225D5418001DDC08 /* Passcode */ = {
+			isa = PBXGroup;
+			children = (
+				9B487B79225D5460001DDC08 /* PasscodeViewController.swift */,
+				9B487B6E225D50BA001DDC08 /* PasscodeNumberPadCollectionViewCell.swift */,
+				9B487B6F225D50BA001DDC08 /* PasscodeNumberPadCollectionViewCell.xib */,
+				9B487B72225D5383001DDC08 /* PasscodeNumberPadTextCollectionViewCell.swift */,
+				9B487B73225D5383001DDC08 /* PasscodeNumberPadTextCollectionViewCell.xib */,
+			);
+			path = Passcode;
 			sourceTree = "<group>";
 		};
 		9DB3EC8C3B0B077176EE75E4 /* Frameworks */ = {
@@ -279,10 +305,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B487B75225D5383001DDC08 /* PasscodeNumberPadTextCollectionViewCell.xib in Resources */,
 				9B487B45225C0DA7001DDC08 /* LaunchScreen.storyboard in Resources */,
 				9B487B42225C0DA7001DDC08 /* Assets.xcassets in Resources */,
 				9B487B40225C0DA5001DDC08 /* Main.storyboard in Resources */,
 				9B487B69225C0DF6001DDC08 /* Onboarding.storyboard in Resources */,
+				9B487B71225D50BA001DDC08 /* PasscodeNumberPadCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,8 +416,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B487B74225D5383001DDC08 /* PasscodeNumberPadTextCollectionViewCell.swift in Sources */,
+				9B487B6D225D4669001DDC08 /* CountryCodeViewController.swift in Sources */,
 				9B487B6B225C111F001DDC08 /* WelcomeViewController.swift in Sources */,
 				9B487B3D225C0DA5001DDC08 /* ViewController.swift in Sources */,
+				9B487B7A225D5460001DDC08 /* PasscodeViewController.swift in Sources */,
+				9B487B70225D50BA001DDC08 /* PasscodeNumberPadCollectionViewCell.swift in Sources */,
 				9B487B3B225C0DA5001DDC08 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
