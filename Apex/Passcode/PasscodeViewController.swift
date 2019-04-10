@@ -74,7 +74,8 @@ class passcodeViewController: UIViewController {
     
     func clearInputKeycodeView(){
     
-    self.inputPassCode = []
+  //  self.inputPassCode = []
+    
     self.inputPassCode = []
     self.setupKeycodeView()
     
@@ -170,17 +171,21 @@ extension passcodeViewController : UICollectionViewDataSource, UICollectionViewD
         let data = self.passCodeKeyData[indexPath.row]
         
         if(data.status == 0){
+            print(data.value)
             
             self.inputPassCode.append(data.value)
             self.inputPassCodeAction()
             
         }
         else {
+            
             if(data.status == 1) {
+                print(data.value)
                 self.clearInputKeycodeView()
             }
             
             if(data.status == 2) {
+                print(data.value)
                 if(self.inputPassCode.count > 0){
                     
                     self.inputPassCode.remove(at: inputPassCode.count - 1)
