@@ -9,6 +9,11 @@ target 'Apex' do
   pod 'TextFieldEffects'
   pod 'KeyboardMan'
   pod 'IBAnimatable'
+  pod 'SwiftyJWT'
+   
+  #Networking
+  pod 'SwiftyJSON'
+  pod 'Alamofire'
 
   # Pods for Apex
 

@@ -45,7 +45,7 @@ class welcomeViewController: UIViewController {
         self.Initialize()
         self.InitializeKeyboardMan()
     
-        
+        phoneNumberTextField.text = UserDefaults.standard.string(forKey: "Phone")
 
         
       //  self.phoneNumberTextField.becomeFirstResponder()
@@ -78,12 +78,15 @@ class welcomeViewController: UIViewController {
 }
     
     func isValidMobile() -> Bool {
-        if phoneNumberTextField.text!.count > 9 {
+        
+        
+       if phoneNumberTextField.text!.count > 9 {
             return true
         } else {
             return false
         }
     }
+
     
     
     
@@ -140,14 +143,14 @@ class welcomeViewController: UIViewController {
         return result
     }
     
-    //MARK: Checking total mobile number validation(phone number validation and 10 < phone number string count < 12)
+
     
     
     // MARK: Goes to the next screen
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "" {
             let enterpasscode = segue.destination as! passcodeViewController
-          //  enterpasscode.phoneNumber = phoneNumberTextField.text!.trimmingCharacters(in: .whitespaces)
+        
         }
     }
     

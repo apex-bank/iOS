@@ -1,28 +1,44 @@
 PODS:
+  - Alamofire (4.8.0)
   - IBAnimatable (5.2.1)
   - JVFloatLabeledTextField (1.2.1)
   - KeyboardMan (1.2.3)
+  - SwiftyCrypto (0.0.1)
+  - SwiftyJSON (4.2.0)
+  - SwiftyJWT (0.0.3):
+    - SwiftyCrypto (~> 0.0.1)
   - TextFieldEffects (1.5.1)
 
 DEPENDENCIES:
+  - Alamofire
   - IBAnimatable
   - JVFloatLabeledTextField
   - KeyboardMan
+  - SwiftyJSON
+  - SwiftyJWT
   - TextFieldEffects
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - IBAnimatable
     - JVFloatLabeledTextField
     - KeyboardMan
+    - SwiftyCrypto
+    - SwiftyJSON
+    - SwiftyJWT
     - TextFieldEffects
 
 SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   IBAnimatable: a46b835ec6875178516cf7e014a40194d6bfa3fc
   JVFloatLabeledTextField: cfc44e3c4d493b2ed92ede8035e8e89c2912ba64
   KeyboardMan: b51e3209d41ff56f65459c9cf734a5f8c5443783
+  SwiftyCrypto: ab59cdb153a7ca99b657fa8d9ebd2ebbd7694bbe
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  SwiftyJWT: e46e8457138c6567a1a9ff05a6efc8ef678c1187
   TextFieldEffects: 7d372f58aeaf9acd9626bbf962680aef926b085d
 
-PODFILE CHECKSUM: a5db182ea8a3448e0e6540ff6d72979c614d7c5a
+PODFILE CHECKSUM: f744318d554f698ed6077b2b998916af14fa9d06
 
 COCOAPODS: 1.5.2

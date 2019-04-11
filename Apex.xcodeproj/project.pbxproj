@@ -27,6 +27,10 @@
 		9B487B7F225EA197001DDC08 /* ConfirmPasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B487B7E225EA197001DDC08 /* ConfirmPasscodeViewController.swift */; };
 		9B487B81225EA8BF001DDC08 /* OTPSMSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B487B80225EA8BF001DDC08 /* OTPSMSViewController.swift */; };
 		9B487B83225EF90E001DDC08 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B487B82225EF90E001DDC08 /* User.swift */; };
+		9B487B86225F0057001DDC08 /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B487B85225F0057001DDC08 /* NetworkConnection.swift */; };
+		9B487B88225F00BA001DDC08 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B487B87225F00BA001DDC08 /* Reachability.swift */; };
+		9B487B8A225F0107001DDC08 /* ShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B487B89225F0107001DDC08 /* ShareManager.swift */; };
+		9B487B8C225F0524001DDC08 /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B487B8B225F0524001DDC08 /* LoginState.swift */; };
 		ABB9218A5AB555297AB3C031 /* Pods_ApexTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6ACA3E1AEC26449EC7D8981 /* Pods_ApexTests.framework */; };
 		F66BB6657AF225BB00311B46 /* Pods_Apex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7EE280B9AE0F25C246E3F9 /* Pods_Apex.framework */; };
 /* End PBXBuildFile section */
@@ -78,6 +82,10 @@
 		9B487B7E225EA197001DDC08 /* ConfirmPasscodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPasscodeViewController.swift; sourceTree = "<group>"; };
 		9B487B80225EA8BF001DDC08 /* OTPSMSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPSMSViewController.swift; sourceTree = "<group>"; };
 		9B487B82225EF90E001DDC08 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9B487B85225F0057001DDC08 /* NetworkConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
+		9B487B87225F00BA001DDC08 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		9B487B89225F0107001DDC08 /* ShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareManager.swift; sourceTree = "<group>"; };
+		9B487B8B225F0524001DDC08 /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
 		B18359E7D0ABD0C9FCAED6D4 /* Pods-ApexUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApexUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ApexUITests/Pods-ApexUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CC0BD7D8D4339FC9F1840A34 /* Pods-Apex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Apex.release.xcconfig"; path = "Pods/Target Support Files/Pods-Apex/Pods-Apex.release.xcconfig"; sourceTree = "<group>"; };
 		D6ACA3E1AEC26449EC7D8981 /* Pods_ApexTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApexTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,12 +163,14 @@
 				9B487B3C225C0DA5001DDC08 /* ViewController.swift */,
 				9B487B3E225C0DA5001DDC08 /* Main.storyboard */,
 				9B487B68225C0DF6001DDC08 /* Onboarding.storyboard */,
-				9B487B82225EF90E001DDC08 /* User.swift */,
-				9B487B76225D5418001DDC08 /* Passcode */,
-				9B487B6C225D4669001DDC08 /* CountryCodeViewController.swift */,
-				9B487B80225EA8BF001DDC08 /* OTPSMSViewController.swift */,
-				9B487B7B225D787E001DDC08 /* Helpers */,
+				9B487B76225D5418001DDC08 /* PasscodeHelpers */,
 				9B487B6A225C111F001DDC08 /* WelcomeViewController.swift */,
+				9B487B6C225D4669001DDC08 /* CountryCodeViewController.swift */,
+				9B487B79225D5460001DDC08 /* PasscodeViewController.swift */,
+				9B487B7E225EA197001DDC08 /* ConfirmPasscodeViewController.swift */,
+				9B487B80225EA8BF001DDC08 /* OTPSMSViewController.swift */,
+				9B487B84225F0046001DDC08 /* Network */,
+				9B487B7B225D787E001DDC08 /* Helpers */,
 				9B487B41225C0DA7001DDC08 /* Assets.xcassets */,
 				9B487B43225C0DA7001DDC08 /* LaunchScreen.storyboard */,
 				9B487B46225C0DA7001DDC08 /* Info.plist */,
@@ -186,25 +196,35 @@
 			path = ApexUITests;
 			sourceTree = "<group>";
 		};
-		9B487B76225D5418001DDC08 /* Passcode */ = {
+		9B487B76225D5418001DDC08 /* PasscodeHelpers */ = {
 			isa = PBXGroup;
 			children = (
-				9B487B7E225EA197001DDC08 /* ConfirmPasscodeViewController.swift */,
-				9B487B79225D5460001DDC08 /* PasscodeViewController.swift */,
 				9B487B6E225D50BA001DDC08 /* PasscodeNumberPadCollectionViewCell.swift */,
 				9B487B6F225D50BA001DDC08 /* PasscodeNumberPadCollectionViewCell.xib */,
 				9B487B72225D5383001DDC08 /* PasscodeNumberPadTextCollectionViewCell.swift */,
 				9B487B73225D5383001DDC08 /* PasscodeNumberPadTextCollectionViewCell.xib */,
 			);
-			path = Passcode;
+			path = PasscodeHelpers;
 			sourceTree = "<group>";
 		};
 		9B487B7B225D787E001DDC08 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9B487B82225EF90E001DDC08 /* User.swift */,
 				9B487B7C225D78B7001DDC08 /* UIColorPalette.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9B487B84225F0046001DDC08 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9B487B85225F0057001DDC08 /* NetworkConnection.swift */,
+				9B487B8B225F0524001DDC08 /* LoginState.swift */,
+				9B487B89225F0107001DDC08 /* ShareManager.swift */,
+				9B487B87225F00BA001DDC08 /* Reachability.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		9DB3EC8C3B0B077176EE75E4 /* Frameworks */ = {
@@ -394,16 +414,24 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Apex/Pods-Apex-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/IBAnimatable/IBAnimatable.framework",
 				"${BUILT_PRODUCTS_DIR}/JVFloatLabeledTextField/JVFloatLabeledTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/KeyboardMan/KeyboardMan.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyCrypto/SwiftyCrypto.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJWT/SwiftyJWT.framework",
 				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBAnimatable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVFloatLabeledTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeyboardMan.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyCrypto.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJWT.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B487B81225EA8BF001DDC08 /* OTPSMSViewController.swift in Sources */,
+				9B487B8A225F0107001DDC08 /* ShareManager.swift in Sources */,
 				9B487B74225D5383001DDC08 /* PasscodeNumberPadTextCollectionViewCell.swift in Sources */,
 				9B487B6D225D4669001DDC08 /* CountryCodeViewController.swift in Sources */,
 				9B487B6B225C111F001DDC08 /* WelcomeViewController.swift in Sources */,
@@ -444,9 +473,12 @@
 				9B487B7F225EA197001DDC08 /* ConfirmPasscodeViewController.swift in Sources */,
 				9B487B3D225C0DA5001DDC08 /* ViewController.swift in Sources */,
 				9B487B7A225D5460001DDC08 /* PasscodeViewController.swift in Sources */,
+				9B487B86225F0057001DDC08 /* NetworkConnection.swift in Sources */,
+				9B487B8C225F0524001DDC08 /* LoginState.swift in Sources */,
 				9B487B70225D50BA001DDC08 /* PasscodeNumberPadCollectionViewCell.swift in Sources */,
 				9B487B3B225C0DA5001DDC08 /* AppDelegate.swift in Sources */,
 				9B487B83225EF90E001DDC08 /* User.swift in Sources */,
+				9B487B88225F00BA001DDC08 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
