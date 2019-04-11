@@ -31,6 +31,7 @@
 		9B487B88225F00BA001DDC08 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B487B87225F00BA001DDC08 /* Reachability.swift */; };
 		9B487B8A225F0107001DDC08 /* ShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B487B89225F0107001DDC08 /* ShareManager.swift */; };
 		9B487B8C225F0524001DDC08 /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B487B8B225F0524001DDC08 /* LoginState.swift */; };
+		9B487B8E225FF666001DDC08 /* StringFormatterPhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B487B8D225FF666001DDC08 /* StringFormatterPhoneNumber.swift */; };
 		ABB9218A5AB555297AB3C031 /* Pods_ApexTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6ACA3E1AEC26449EC7D8981 /* Pods_ApexTests.framework */; };
 		F66BB6657AF225BB00311B46 /* Pods_Apex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7EE280B9AE0F25C246E3F9 /* Pods_Apex.framework */; };
 /* End PBXBuildFile section */
@@ -86,6 +87,7 @@
 		9B487B87225F00BA001DDC08 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		9B487B89225F0107001DDC08 /* ShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareManager.swift; sourceTree = "<group>"; };
 		9B487B8B225F0524001DDC08 /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
+		9B487B8D225FF666001DDC08 /* StringFormatterPhoneNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFormatterPhoneNumber.swift; sourceTree = "<group>"; };
 		B18359E7D0ABD0C9FCAED6D4 /* Pods-ApexUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApexUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ApexUITests/Pods-ApexUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CC0BD7D8D4339FC9F1840A34 /* Pods-Apex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Apex.release.xcconfig"; path = "Pods/Target Support Files/Pods-Apex/Pods-Apex.release.xcconfig"; sourceTree = "<group>"; };
 		D6ACA3E1AEC26449EC7D8981 /* Pods_ApexTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApexTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				9B487B82225EF90E001DDC08 /* User.swift */,
+				9B487B8D225FF666001DDC08 /* StringFormatterPhoneNumber.swift */,
 				9B487B7C225D78B7001DDC08 /* UIColorPalette.swift */,
 			);
 			path = Helpers;
@@ -466,6 +469,7 @@
 			files = (
 				9B487B81225EA8BF001DDC08 /* OTPSMSViewController.swift in Sources */,
 				9B487B8A225F0107001DDC08 /* ShareManager.swift in Sources */,
+				9B487B8E225FF666001DDC08 /* StringFormatterPhoneNumber.swift in Sources */,
 				9B487B74225D5383001DDC08 /* PasscodeNumberPadTextCollectionViewCell.swift in Sources */,
 				9B487B6D225D4669001DDC08 /* CountryCodeViewController.swift in Sources */,
 				9B487B6B225C111F001DDC08 /* WelcomeViewController.swift in Sources */,

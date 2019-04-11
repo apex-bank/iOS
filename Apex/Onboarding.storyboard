@@ -103,6 +103,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="textFieldDidChange:" destination="hQf-iB-3hi" eventType="editingChanged" id="EeM-ch-1Zh"/>
                                     <action selector="textFieldDidChange:" destination="hQf-iB-3hi" eventType="editingDidEnd" id="ezy-2a-OqD"/>
                                     <outlet property="delegate" destination="hQf-iB-3hi" id="Mgd-Xy-aW3"/>
                                 </connections>
@@ -761,7 +762,6 @@
         <image name="Pistols-at-dawn" width="78" height="78"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5Re-IM-NBw"/>
         <segue reference="3LL-4N-6XV"/>
     </inferredMetricsTieBreakers>
 </document>

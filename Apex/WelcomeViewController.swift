@@ -26,7 +26,7 @@ class welcomeViewController: UIViewController {
     @IBOutlet weak var widthConstraint: NSLayoutConstraint!
     @IBOutlet weak var phoneNumberLabelError: UILabel!
    
-    
+    // Validation for the continue button
     var validate: Bool = false {
         didSet {
             if validate {
@@ -41,6 +41,7 @@ class welcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         self.Initialize()
         self.InitializeKeyboardMan()
@@ -51,12 +52,23 @@ class welcomeViewController: UIViewController {
       //  self.phoneNumberTextField.becomeFirstResponder()
     }
     
-    
+    // Continue Butotn
     @IBAction func continueButton(_ sender: Any) {
         if self.validate {
         let phoneNumberString = phoneNumberTextField.text!.trimmingCharacters(in: .whitespaces)
-            self.performSegue(withIdentifier: "enterpasscode", sender: self)
+
+            self.createNewUser(phoneNumber: phoneNumberString)
+          //  self.performSegue(withIdentifier: "enterpasscode", sender: self)
+            print("Mobile: \(phoneNumberString)")
         }
+    }
+    
+    // Create User Function
+    func createNewUser(phoneNumber: String) {
+        var signUpData: [String : Any] = [:]
+
+        signUpData["mobile"] = phoneNumber
+      
     }
     
     
@@ -66,33 +78,69 @@ class welcomeViewController: UIViewController {
     }
     
     @IBAction func textFieldDidChange(_ sender: HoshiTextField) {
-       if sender == self.phoneNumberTextField {
+       
+        if sender == self.phoneNumberTextField {
             
             if self.isValidMobile() {
                 self.validate = true
                
-            } else {
+            } else if sender == self.phoneNumberTextField {
+                //Convert
+                let lastText = sender.text
+                sender.text = lastText!.format("nnnn nnn nnn nnn nnn nnn", oldString: lastText!)
+                if self.isValidMobile() {
+                    self.phoneNumberLabelError.isHidden = true
+                }
+            }
+            
+            if self.isValidMobile(){
+                self.validate = true }
+                    else {
+                
                 self.validate = false
-        }
-    }
-}
+                    }
+                }
+            }
     
+
+
+    // Validtion (WIP) for mobile number (brett)
+  //  func isValidMobile() -> Bool {
+        
+        
+        
+   //    if phoneNumberTextField.text!.count > 9 {
+  //          return true
+  //      } else {
+  //          return false
+  //      }
+  //  }
+
+    
+    // NEW One from Wang
+    //MARK: Checking total mobile number validation(phone number validation and 10 < phone number string count < 12)
     func isValidMobile() -> Bool {
+        let unformat = self.phoneNumberTextField.text!.unformat("nnnn nnn nnn nnn nnn nnn", oldString: self.phoneNumberTextField.text!)
+        let real_num = "+" + unformat
         
-        
-       if phoneNumberTextField.text!.count > 9 {
-            return true
-        } else {
+        if self.isValidPhoneNumber(value: real_num) {
+            
+            if String(unformat).count > 9 && String(unformat).count < 16 {
+                
+                return true
+            }else {
+                return false
+            }
+        }else {
             return false
         }
     }
-
     
     
     
-    
+    // MARK: for intialization for errors
     func Initialize() {
-        self.continueButton.fillColor = UIColor.deepSkyBlue
+        self.continueButton.fillColor = UIColor.lightGray
         
         phoneNumberTextField.delegate = self
         
@@ -151,6 +199,8 @@ class welcomeViewController: UIViewController {
         if segue.identifier == "" {
             let enterpasscode = segue.destination as! passcodeViewController
         
+        } else {
+            print("error")
         }
     }
     
@@ -181,8 +231,7 @@ extension welcomeViewController: UITextFieldDelegate {
                 return
                 
             }
-            
-            else if String(textField.text!).count > 10 {
+            else if String(textField.text!).count > 12 {
                 
                 self.phoneNumberLabelError.text = "Invalid Phone Number."
                 self.phoneNumberLabelError.isHidden = false
@@ -190,12 +239,60 @@ extension welcomeViewController: UITextFieldDelegate {
                 
                 return
             }
+                
+            else if textField == self.phoneNumberTextField {
+                
+                let unformat = self.phoneNumberTextField.text!.unformat("nnnn nnn nnn nnn nnn nnn nnn nnn", oldString: self.phoneNumberTextField.text!)
+                
+                if unformat == "" {
+                    
+                   
+                    self.phoneNumberLabelError.isHidden = false
+                    self.phoneNumberLabelError.text = "This field is required."
+                    self.phoneNumberLabelError.textColor = UIColor.red
+                    
+                    return
+                
+            }
+                else if String(unformat).count < 10 {
+                    
+                   
+                    self.phoneNumberLabelError.isHidden = false
+                    self.phoneNumberLabelError.text = "Invalid Mobile Number. You need at least 9 characters."
+                    self.phoneNumberLabelError.textColor = UIColor.red
+                    
+                    return
+                    
+                }else if String(unformat).count > 15 {
+                    
+                
+                    self.phoneNumberLabelError.isHidden = false
+                    self.phoneNumberLabelError.text = "Invalid Mobile Number. You need less than 12 characters."
+                    self.phoneNumberLabelError.textColor = UIColor.red
+                    
+                    return
+                    
+                }
+                
+                let real_num = "+" + unformat
+                print("unformat : \(real_num)")
+                if !self.isValidPhoneNumber(value: real_num) {
+                    
+                    print("string contains special characters")
+                 
+                    self.phoneNumberLabelError.isHidden = false
+                    self.phoneNumberLabelError.text = "Invalid Mobile Number. You must input correct mobile number."
+                    self.phoneNumberLabelError.textColor = UIColor.red
+                }
+            
+           
             
             else if textField == self.phoneNumberTextField {
                 
     
                 
                 return
+                }
             }
         }
     }
