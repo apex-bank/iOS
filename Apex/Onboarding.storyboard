@@ -53,13 +53,6 @@
                                     <constraint firstAttribute="width" constant="120" id="VDC-OH-vQ9"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSZ-qT-CrH">
-                                <rect key="frame" x="164" y="471" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="RXw-hE-wVi" kind="show" customClass="PresentSlideSegue" customModule="IBAnimatable" id="x1q-C1-g2f"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The First Boutique Digital Bank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9E-Sb-Hf2">
                                 <rect key="frame" x="68" y="286" width="236" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -110,6 +103,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="textFieldDidChange:" destination="hQf-iB-3hi" eventType="editingDidEnd" id="ezy-2a-OqD"/>
                                     <outlet property="delegate" destination="hQf-iB-3hi" id="Mgd-Xy-aW3"/>
                                 </connections>
                             </textField>
@@ -170,20 +164,16 @@
                             <constraint firstItem="7a1-At-SCe" firstAttribute="top" secondItem="aY7-2I-Gc5" secondAttribute="bottom" constant="38" id="BZT-mn-zLe"/>
                             <constraint firstItem="n9E-Sb-Hf2" firstAttribute="leading" secondItem="DzQ-dw-d9Y" secondAttribute="leading" constant="68" id="Crs-MT-7bg"/>
                             <constraint firstItem="NpE-yR-9Ax" firstAttribute="leading" secondItem="DzQ-dw-d9Y" secondAttribute="leading" constant="28" id="E0e-B5-WVt"/>
-                            <constraint firstItem="gSZ-qT-CrH" firstAttribute="top" secondItem="dz9-8A-k8y" secondAttribute="bottom" constant="54" id="ER0-gN-Xqq"/>
                             <constraint firstItem="NMr-b9-Il9" firstAttribute="leading" secondItem="NpE-yR-9Ax" secondAttribute="trailing" constant="23" id="Fst-0R-Oov"/>
                             <constraint firstItem="7a1-At-SCe" firstAttribute="leading" secondItem="DzQ-dw-d9Y" secondAttribute="leading" constant="72" id="JnX-Xt-er6"/>
                             <constraint firstItem="n9E-Sb-Hf2" firstAttribute="top" secondItem="7a1-At-SCe" secondAttribute="bottom" constant="16" id="LKI-Wg-Cow"/>
-                            <constraint firstItem="gSZ-qT-CrH" firstAttribute="centerX" secondItem="dz9-8A-k8y" secondAttribute="centerX" id="MhK-MB-K52"/>
                             <constraint firstItem="NMr-b9-Il9" firstAttribute="bottom" secondItem="NpE-yR-9Ax" secondAttribute="bottom" id="RAk-8B-pzh"/>
                             <constraint firstItem="9Xg-G1-n9m" firstAttribute="centerX" secondItem="RcU-Rj-x0S" secondAttribute="centerX" id="SMK-LU-W2g"/>
                             <constraint firstItem="NMr-b9-Il9" firstAttribute="leading" secondItem="dz9-8A-k8y" secondAttribute="leading" id="ZmW-ih-cC0"/>
                             <constraint firstAttribute="bottom" secondItem="9Xg-G1-n9m" secondAttribute="bottom" constant="50" id="aPE-vI-9GW"/>
-                            <constraint firstItem="gSZ-qT-CrH" firstAttribute="leading" secondItem="DzQ-dw-d9Y" secondAttribute="leading" constant="164.06999999999999" id="bB4-h3-gJS"/>
                             <constraint firstItem="dz9-8A-k8y" firstAttribute="top" secondItem="NMr-b9-Il9" secondAttribute="bottom" constant="8" id="eb6-na-QYE"/>
                             <constraint firstItem="DzQ-dw-d9Y" firstAttribute="trailing" secondItem="n9E-Sb-Hf2" secondAttribute="trailing" constant="71" id="mih-1M-29B"/>
                             <constraint firstItem="DzQ-dw-d9Y" firstAttribute="trailing" secondItem="NMr-b9-Il9" secondAttribute="trailing" constant="34" id="n2r-gR-OLV"/>
-                            <constraint firstItem="DzQ-dw-d9Y" firstAttribute="trailing" secondItem="gSZ-qT-CrH" secondAttribute="trailing" constant="164.93000000000001" id="pCE-fl-JeG"/>
                             <constraint firstItem="aY7-2I-Gc5" firstAttribute="centerX" secondItem="RcU-Rj-x0S" secondAttribute="centerX" id="wvx-nU-UuE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DzQ-dw-d9Y"/>
@@ -200,7 +190,6 @@
                         <outlet property="phoneNumberLabelError" destination="dz9-8A-k8y" id="h4c-a1-fHZ"/>
                         <outlet property="phoneNumberTextField" destination="NMr-b9-Il9" id="IK9-7l-u2S"/>
                         <outlet property="subHeaderLabel" destination="n9E-Sb-Hf2" id="ilz-Nw-qzY"/>
-                        <outlet property="tempButton" destination="gSZ-qT-CrH" id="Inl-03-LYQ"/>
                         <outlet property="widthConstraint" destination="j4q-sd-Mq0" id="zAl-fr-z65"/>
                     </connections>
                 </viewController>

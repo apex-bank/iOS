@@ -19,20 +19,23 @@ class welcomeViewController: UIViewController {
     @IBOutlet weak var logImage: UIImageView!
     @IBOutlet weak var subHeaderLabel: UILabel!
     @IBOutlet weak var headerLabel: UILabel!
-    
     @IBOutlet weak var countryCodeTextField: HoshiTextField!
     @IBOutlet weak var phoneNumberTextField: HoshiTextField!
-    
-    
     @IBOutlet weak var continueButton: AnimatableButton!
     @IBOutlet weak var continueButtonHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var widthConstraint: NSLayoutConstraint!
     @IBOutlet weak var phoneNumberLabelError: UILabel!
    
-    @IBOutlet weak var tempButton: UIButton!
     
-    
-   
+    var validate: Bool = false {
+        didSet {
+            if validate {
+                self.continueButton.fillColor = UIColor.deepSkyBlue
+        } else {
+        self.continueButton.fillColor = UIColor.lightGray
+        }
+    }
+}
     
     let keyboardMan = KeyboardMan()
     
@@ -50,9 +53,10 @@ class welcomeViewController: UIViewController {
     
     
     @IBAction func continueButton(_ sender: Any) {
-      //  if self.validate {
-      //      self.performSegue(withIdentifier: "", sender: self)
-       // }
+        if self.validate {
+        let phoneNumberString = phoneNumberTextField.text!.trimmingCharacters(in: .whitespaces)
+            self.performSegue(withIdentifier: "enterpasscode", sender: self)
+        }
     }
     
     
@@ -61,13 +65,33 @@ class welcomeViewController: UIViewController {
         view.endEditing(true)
     }
     
+    @IBAction func textFieldDidChange(_ sender: HoshiTextField) {
+       if sender == self.phoneNumberTextField {
+            
+            if self.isValidMobile() {
+                self.validate = true
+               
+            } else {
+                self.validate = false
+        }
+    }
+}
+    
+    func isValidMobile() -> Bool {
+        if phoneNumberTextField.text!.count > 9 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     
     
     
     func Initialize() {
         self.continueButton.fillColor = UIColor.deepSkyBlue
         
-      //  phoneNumberTextField.delegate = self
+        phoneNumberTextField.delegate = self
         
         self.phoneNumberLabelError.isHidden = true
         
@@ -116,6 +140,9 @@ class welcomeViewController: UIViewController {
         return result
     }
     
+    //MARK: Checking total mobile number validation(phone number validation and 10 < phone number string count < 12)
+    
+    
     // MARK: Goes to the next screen
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "" {
@@ -136,7 +163,6 @@ extension welcomeViewController: UITextFieldDelegate {
             
             if textField.text == "" {
                 
-              //  textField.placeholder = UIColor.red
                 self.phoneNumberLabelError.text = "This field is required."
                 self.phoneNumberLabelError.isHidden = false
                 
@@ -145,7 +171,6 @@ extension welcomeViewController: UITextFieldDelegate {
             
             else if String(textField.text!).count < 7 {
                 
-           //     textField.placeholder = UIColor.red
                 self.phoneNumberLabelError.text = "Invalid Phone Number."
                 self.phoneNumberLabelError.isHidden = false
                 self.phoneNumberLabelError.textColor = UIColor.red
@@ -156,10 +181,16 @@ extension welcomeViewController: UITextFieldDelegate {
             
             else if String(textField.text!).count > 10 {
                 
-            //    textField.placeholder = UIColor.red
                 self.phoneNumberLabelError.text = "Invalid Phone Number."
                 self.phoneNumberLabelError.isHidden = false
                 self.phoneNumberLabelError.textColor = UIColor.red
+                
+                return
+            }
+            
+            else if textField == self.phoneNumberTextField {
+                
+    
                 
                 return
             }
