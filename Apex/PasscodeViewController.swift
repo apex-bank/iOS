@@ -109,6 +109,7 @@ class passcodeViewController: UIViewController {
         }
     }
     
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,9 +117,11 @@ class passcodeViewController: UIViewController {
         self.clearInputKeycodeView()
         self.setupCollectionView()
         
-     
     }
 }
+
+
+
 
 
 extension passcodeViewController : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {

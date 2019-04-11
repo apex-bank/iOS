@@ -25,7 +25,8 @@ class welcomeViewController: UIViewController {
     @IBOutlet weak var continueButtonHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var widthConstraint: NSLayoutConstraint!
     @IBOutlet weak var phoneNumberLabelError: UILabel!
-   
+    @IBOutlet weak var countryPickerButton: UIButton!
+    
     // Validation for the continue button
     var validate: Bool = false {
         didSet {
@@ -50,6 +51,11 @@ class welcomeViewController: UIViewController {
 
         
       //  self.phoneNumberTextField.becomeFirstResponder()
+    }
+    
+    // Country Picker Button
+    @IBAction func countryPickerButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "countrycode", sender: self)
     }
     
     // Continue Butotn
@@ -101,23 +107,7 @@ class welcomeViewController: UIViewController {
                     }
                 }
             }
-    
 
-
-    // Validtion (WIP) for mobile number (brett)
-  //  func isValidMobile() -> Bool {
-        
-        
-        
-   //    if phoneNumberTextField.text!.count > 9 {
-  //          return true
-  //      } else {
-  //          return false
-  //      }
-  //  }
-
-    
-    // NEW One from Wang
     //MARK: Checking total mobile number validation(phone number validation and 10 < phone number string count < 12)
     func isValidMobile() -> Bool {
         let unformat = self.phoneNumberTextField.text!.unformat("nnnn nnn nnn nnn nnn nnn", oldString: self.phoneNumberTextField.text!)

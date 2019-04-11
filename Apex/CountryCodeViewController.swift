@@ -11,4 +11,11 @@ import UIKit
 
 class countryCodeViewController: UIViewController {
     
+    
+    @IBOutlet weak var backButton: UIButton!
+    
+    @IBAction func backButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "backtowelcome", sender: self)
+    }
+    
 }
