@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A0E2C3E6F3C4F180B767109 /* Pods_ApexUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2692BE78CC67CBD8389D070C /* Pods_ApexUITests.framework */; };
+		9B1CDDC122604C1900CC5BD5 /* CountryCodeCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1CDDC022604C1900CC5BD5 /* CountryCodeCellTableViewCell.swift */; };
 		9B487B3B225C0DA5001DDC08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B487B3A225C0DA5001DDC08 /* AppDelegate.swift */; };
 		9B487B3D225C0DA5001DDC08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B487B3C225C0DA5001DDC08 /* ViewController.swift */; };
 		9B487B40225C0DA5001DDC08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B487B3E225C0DA5001DDC08 /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		3C49DC0E8A485AF8F6F8E2EA /* Pods-ApexTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApexTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ApexTests/Pods-ApexTests.release.xcconfig"; sourceTree = "<group>"; };
 		40F7AA51F92ECA34606F3824 /* Pods-Apex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Apex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Apex/Pods-Apex.debug.xcconfig"; sourceTree = "<group>"; };
 		75D5F02307D4D5847D275357 /* Pods-ApexUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApexUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ApexUITests/Pods-ApexUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9B1CDDC022604C1900CC5BD5 /* CountryCodeCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeCellTableViewCell.swift; sourceTree = "<group>"; };
 		9B487B37225C0DA5001DDC08 /* Apex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Apex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B487B3A225C0DA5001DDC08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B487B3C225C0DA5001DDC08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				9B487B82225EF90E001DDC08 /* User.swift */,
+				9B1CDDC022604C1900CC5BD5 /* CountryCodeCellTableViewCell.swift */,
 				9B487B8D225FF666001DDC08 /* StringFormatterPhoneNumber.swift */,
 				9B487B7C225D78B7001DDC08 /* UIColorPalette.swift */,
 			);
@@ -475,6 +478,7 @@
 				9B487B6B225C111F001DDC08 /* WelcomeViewController.swift in Sources */,
 				9B487B7D225D78B7001DDC08 /* UIColorPalette.swift in Sources */,
 				9B487B7F225EA197001DDC08 /* ConfirmPasscodeViewController.swift in Sources */,
+				9B1CDDC122604C1900CC5BD5 /* CountryCodeCellTableViewCell.swift in Sources */,
 				9B487B3D225C0DA5001DDC08 /* ViewController.swift in Sources */,
 				9B487B7A225D5460001DDC08 /* PasscodeViewController.swift in Sources */,
 				9B487B86225F0057001DDC08 /* NetworkConnection.swift in Sources */,
