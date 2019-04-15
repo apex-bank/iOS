@@ -26,6 +26,8 @@ class welcomeViewController: UIViewController {
     @IBOutlet weak var widthConstraint: NSLayoutConstraint!
     @IBOutlet weak var phoneNumberLabelError: UILabel!
     @IBOutlet weak var countryPickerButton: UIButton!
+  //  @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
+    
     
     // Validation for the continue button
     var validate: Bool = false {
@@ -40,9 +42,12 @@ class welcomeViewController: UIViewController {
     
     let keyboardMan = KeyboardMan()
     
+   
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
         self.Initialize()
         self.InitializeKeyboardMan()
