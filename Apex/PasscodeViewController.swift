@@ -62,6 +62,16 @@ class passcodeViewController: UIViewController {
         self.passcode4.backgroundColor = UIColor.deepSkyBlue25
     }
     
+    /**
+    upload users info
+     if the phone number information is recieved, then
+     - phoneNumber: from WelcomeViewController as the users phone number
+     - pincode: from user entry
+ 
+ */
+    
+    
+    
     private func setupCollectionView(){
     self.passcodeCollectionView.register(UINib(nibName:self.PasscodeNumberPadCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: self.PasscodeNumberPadCollectionViewCell)
     self.passcodeCollectionView.register(UINib(nibName:self.PasscodeNumberPadTextCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: self.PasscodeNumberPadTextCollectionViewCell)

@@ -28,6 +28,8 @@ class welcomeViewController: UIViewController {
     @IBOutlet weak var countryPickerButton: UIButton!
   //  @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
     
+    // VariableData
+   // var phoneNumber: String = ""
     
     // Validation for the continue button
     var validate: Bool = false {
@@ -79,8 +81,11 @@ class welcomeViewController: UIViewController {
         var signUpData: [String : Any] = [:]
 
         signUpData["mobile"] = phoneNumber
+        
+            
+        }
       
-    }
+    
     
     
     // MARK: used for viewing end and editing when touches view
@@ -190,14 +195,15 @@ class welcomeViewController: UIViewController {
     
     
     // MARK: Goes to the next screen
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "" {
-            let enterpasscode = segue.destination as! passcodeViewController
+  //  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+  //     if segue.identifier == "" {
+    //       let standardSignUp = segue.destination as! passcodeViewController
+      //      standardSignUp.phoneNumber = phoneNumberTextField.text!.trimmingCharacters(in: .whitespaces)
         
-        } else {
-            print("error")
-        }
-    }
+      //  } else {
+       //     print("error")
+      //  }
+  //  }
     
 }
 

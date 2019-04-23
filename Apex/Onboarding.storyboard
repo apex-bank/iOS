@@ -832,7 +832,6 @@
         <image name="Pistols-at-dawn" width="78" height="78"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Grc-pd-0Il"/>
         <segue reference="XbW-yU-uxu"/>
     </inferredMetricsTieBreakers>
 </document>
